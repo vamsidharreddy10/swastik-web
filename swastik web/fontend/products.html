@@ -1,0 +1,90 @@
+<section class="products" id="products">
+  <h2>Our Products</h2>
+  <div class="product-grid">
+    <div class="product-card">
+      <h3>Steel Pipes</h3>
+      <p>High-quality industrial pipes with long durability.</p>
+      <span>₹2,500 / unit</span>
+    </div>
+    <div class="product-card">
+      <h3>Construction Cement</h3>
+      <p>Premium-grade cement used in large-scale projects.</p>
+      <span>₹420 / bag</span>
+    </div>
+    <div class="product-card">
+      <h3>Electrical Panels</h3>
+      <p>Reliable power management solutions for buildings.</p>
+      <span>₹5,000 / unit</span>
+    </div>
+  </div>
+</section>
+
+<style>
+    /* PRODUCTS SECTION */
+.products {
+  padding: 4rem 1rem;
+  background: #fff;
+  text-align: center;
+}
+
+.products h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+.product-card {
+  background: #f9f9f9;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s;
+  opacity: 0;
+  transform: translateY(40px);
+  animation: fadeInUp 1s forwards;
+}
+
+.product-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+}
+
+.product-card span {
+  display: block;
+  margin-top: 1rem;
+  font-weight: bold;
+  color: #00bcd4;
+}
+
+/* Responsive product grid */
+@media (min-width: 768px) {
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 992px) {
+  .product-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Animation */
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.product-card img {
+  max-width: 100%;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+</style>
